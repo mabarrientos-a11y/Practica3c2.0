@@ -16,7 +16,7 @@ def conectar_db():
             port=DB_PORT,
             database=DB_NAME,
             user=DB_USER,
-            password=DB_PASSWORD
+            password=DB_PASSWORD,
         )
         return conn
     except Exception as e:
@@ -142,7 +142,7 @@ def menu():
         print("2.- Insertar nuevo usuario")
         print("3.- Actualizar correo de usuario")
         print("4.- Eliminar usuario")
-        print("0.- Salir")
+        print("5.- Salir")
 
         opcion = input("\nSelecciona una opción (0 - 4)")
         if opcion == "1":

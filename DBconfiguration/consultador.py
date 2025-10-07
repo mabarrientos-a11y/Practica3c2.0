@@ -1,26 +1,27 @@
 import pyscopg2
 
 #conexión a la base de datos
-conexiom = pyscopg2.connect(
+conexion = pyscopg2.connect(
     host = "localhost",
-    port= "5432"
+    port = "5432",
     database = "credenciales",
     user = "Admin",
-    password = "p4ssw0rdDB"
-)
+    password = "p4ssw0rdDB",
+    )
 
-#crear cursos
+#Crear cursor
 cursor = conexion.cursor()
-#ejecutar consulta 
+
+# Ejecutar consola
 cursor.execute("SELECT * FROM usuarios")
-#fetchone() =una fila
-#fetchmany (n) hasta n filas
-registros = cursor.fatchall() #Recuperar todas las filas devueltas
+#fetchone() = una fila
+#fetchmany(n) = hasta n filas
+registros = cursor.fetchall() #Recuperar todas las filas devueltas
 #registros almacena en tuplas
 
-for fila in registros: 
+for fila in registros:
     print(fila)
 
-    #cerrarla conexion 
-    cursor.close()
-    conexion.close()
+#Cerrar la conexión
+cursor.close()
+conexion.close()
