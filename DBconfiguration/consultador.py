@@ -3,7 +3,7 @@ import pyscopg2
 #conexión a la base de datos
 conexiom = pyscopg2.connect(
     host = "localhost",
-    port= "5232"
+    port= "5432"
     database = "credenciales",
     user = "Admin",
     password = "p4ssw0rdDB"
